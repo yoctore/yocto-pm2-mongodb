@@ -1,0 +1,45 @@
+{
+  "name": "yocto-pm2-mongodb",
+  "version": "1.0.0",
+  "description": "A pm2 module to get mongodb metrics",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoctore/yocto-pm2-mongodb.git"
+  },
+  "author": {
+    "name": "ROBERT Mathieu",
+    "email": "mathieu@yocto.re",
+    "url": "http://www.yocto.re"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "pm2",
+    "monitoring",
+    "probe",
+    "metric"
+  ],
+  "config": {
+    "ip" : "127.0.0.1",
+    "port" : 27017,
+    "username": "",
+    "password": "",
+    "ssl": false,
+    "authDB": "",
+    "sslCa": "",
+    "sslCert": "",
+    "sslKey": "",
+    "sslValidate": false,
+    "checkServerIdentity": false,
+    "auth": false,
+    "authenticationMechanism": "SCRAM-SHA-1",
+    "refreshDelay": 1000,
+    "database": ""
+  },
+  "dependencies": {
+    "lodash": "^4.14.0",
+    "mongodb": "^2.2.5",
+    "pmx": "^0.6.2",
+    "shelljs": "^0.7.3"
+  }
+}
