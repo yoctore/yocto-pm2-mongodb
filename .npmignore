@@ -1,0 +1,7 @@
+assets
+.codeclimate.yml
+.eslintignore
+.gitattributes
+.gitignore
+.travis.yml
+Gruntfile.js

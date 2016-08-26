@@ -20,8 +20,8 @@
     "metric"
   ],
   "config": {
-    "ip" : "127.0.0.1",
-    "port" : 27017,
+    "ip": "127.0.0.1",
+    "port": 27017,
     "username": "",
     "password": "",
     "ssl": false,
@@ -34,12 +34,17 @@
     "auth": false,
     "authenticationMechanism": "SCRAM-SHA-1",
     "refreshDelay": 1000,
-    "database": ""
+    "database": "",
+    "mode": "keymetrics"
   },
   "dependencies": {
     "lodash": "^4.14.0",
     "mongodb": "^2.2.5",
     "pmx": "^0.6.2",
     "shelljs": "^0.7.3"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "yocto-hint": "^1.3.7"
   }
 }

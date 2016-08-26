@@ -11,9 +11,13 @@ pmx.initModule({
   // widget defintion
   widget : {
     pid     : pmx.resolvePidPaths(['/var/run/mongodb.pid', '/var/run/mongodb/mongodb.pid']),
-    logo    : 'http://mongodb.org/static/images/mongodb-logo.png',
+    // for keymetrics
+    logo    : 'https://raw.githubusercontent.com/yoctore/yocto-pm2-agent/master/assets/mongodb.png',
+    // for your tools
     icon    : 'mongodb',
+    // maybe you need theme info ? but keep this for keymetrics
     theme   : [ '#262E35', '#222222', '#3ff', '#3ff' ],
+    // normal config
     el      : {
       probes        : true,
       actions       : true
@@ -22,7 +26,10 @@ pmx.initModule({
       actions       : false,
       issues        : false,
       meta          : true,
-      main_probes   : [ 'Insert', 'Query', 'Update', 'Delete', 'Command', 'netOut', 'netIn' ]
+      'main_probes' : [ 'Insert', 'Query', 'Update', 'Delete',
+                        'Resident Memory', 'Traffic in', 'Traffic out',
+                        'Connections',
+                      ]
     }
   }
 }, function (err, conf) {
@@ -32,14 +39,14 @@ pmx.initModule({
 
   // default options
   var options = {
-    uri_decode_auth : true
+    'uri_decode_auth' : true
   };
 
   // add ssl property
   if (conf.ssl !== false) {
-    //add ssl flag on url for mongoclient
+    // add ssl flag on url for mongoclient
     url += '?ssl=true';
-      // Build options
+    // Build options
     options = {
       server : {
         sslValidate         : conf.sslValidate,
@@ -63,8 +70,8 @@ pmx.initModule({
 
   // Set this value to reconnect automatically to mongodb
   options.server = _.merge(options.server, {
-    reconnectTries : 'Number.MAX_VALUE',
-    auto_reconnect : true
+    reconnectTries    : 'Number.MAX_VALUE',
+    'auto_reconnect'  : true
   });
 
   if (!_.isEmpty(conf.authDB)) {
