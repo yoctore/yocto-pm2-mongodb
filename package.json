@@ -1,6 +1,6 @@
 {
   "name": "yocto-pm2-mongodb",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A pm2 module to get mongodb metrics",
   "main": "app.js",
   "repository": {
