@@ -12,7 +12,7 @@ pmx.initModule({
   widget : {
     pid     : pmx.resolvePidPaths(['/var/run/mongodb.pid', '/var/run/mongodb/mongodb.pid']),
     // for keymetrics
-    logo    : 'https://raw.githubusercontent.com/yoctore/yocto-pm2-agent/master/assets/mongodb.png',
+    logo    : 'https://raw.githubusercontent.com/yoctore/yocto-pm2-mongodb/master/assets/mongodb.png',
     // for your tools
     icon    : 'mongodb',
     // maybe you need theme info ? but keep this for keymetrics
@@ -24,7 +24,7 @@ pmx.initModule({
     },
     block   : {
       actions       : false,
-      issues        : false,
+      issues        : true,
       meta          : true,
       'main_probes' : [ 'Insert', 'Query', 'Update', 'Delete',
                         'Resident Memory', 'Traffic in', 'Traffic out',
