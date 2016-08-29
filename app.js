@@ -16,7 +16,7 @@ pmx.initModule({
     // for your tools
     icon    : 'mongodb',
     // maybe you need theme info ? but keep this for keymetrics
-    theme   : [ '#262E35', '#222222', '#3ff', '#3ff' ],
+    theme   : [ '#FFFFFF', '#222222', '#3ff', '#3ff' ],
     // normal config
     el      : {
       probes        : true,
